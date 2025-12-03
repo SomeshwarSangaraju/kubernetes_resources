@@ -15,16 +15,35 @@
 #     image: almalinux:9
 #     command: ["sleep", "100"]
 
-apiVersion: v1
+# apiVersion: v1
+# kind: Pod
+# metadata:
+#   name: error-demo
+#   labels:
+#     environment: dev
+#     purpose: error-check
+# spec:
+#   containers:
+#   - name: frontend
+#     image: nginx1111
+#   - name: almalinux
+#     image: almalinux:9
+
+apiversion: v1
 kind: Pod
 metadata:
-  name: error-demo
-  labels:
+  name: resources-demo
+  labels: 
     environment: dev
-    purpose: error-check
+    project: roboshop
 spec:
   containers:
-  - name: frontend
-    image: nginx1111 # imagepullbackoff error because it doesn't exist
-  - name: almalinux
-    image: almalinux:9
+  - name: nginx
+    image: nginx
+    resources:
+      requests:
+        memory: "64mi"
+        cpu: "100"
+      limits:
+        memory: "120 mi"
+        cpu: "400"
