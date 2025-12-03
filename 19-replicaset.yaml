@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginx
+  labels:
+    project: roboshop
+    purpose: rs-demo
+spec:
+  # modify replicas according to your case
+  replicas: 3
+  selector:
+    matchLabels:
+      project: roboshop
+      purpose: rs-demo
+  template:
+    metadata:
+      labels:
+        project: roboshop
+        purpose: rs-demo
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
