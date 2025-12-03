@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: pode-node-demo
+  name: pod-node-demo
   # These labels are used to register this pod with service
   labels:
     project: roboshop
