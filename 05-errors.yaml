@@ -5,6 +5,6 @@ metadata:
 spec:
   containers:
   # - name: nginx
-  #   image: ngindfdfadsfsaf
+  #   image: ngindfdfadsfsaf # imagepullbackoff error because it doesn't exist
   - name: almalinux
-    image: almalinux:9
+    image: almalinux:9 # crashloopbackoff error because it can't start the container
