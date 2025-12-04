@@ -4,7 +4,7 @@ metadata:
   name: error-test
 spec:
   containers:
-  # - name: nginx
-  #   image: ngindfdfadsfsaf # imagepullbackoff error because it doesn't exist
-  - name: almalinux
-    image: almalinux:9 # crashloopbackoff error because it can't start the container
+  - name: nginx
+    image: ngindfdfadsfsaf # imagepullbackoff error because it doesn't exist
+  # - name: almalinux
+  #   image: almalinux:9 # crashloopbackoff error because it can't start the container
