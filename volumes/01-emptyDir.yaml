@@ -23,14 +23,13 @@
 #     emptyDir:
 #       sizeLimit: 100Mi
 
-
 apiVersion: v1
 kind: Pod
 metadata:
   name: empty-dir-demo
   namespace: default
 spec:
-  container:
+  containers:
   - name: nginx
     image: nginx
     volumeMounts:
